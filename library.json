@@ -1,0 +1,22 @@
+{
+  "name": "ModelGaugeM5",
+  "version": "1.0.0",
+  "description": "Driver for the MAX17055 and MAX17260 ModelGauge m5 EZ single-cell fuel gauges: EZ/custom models, chemistry selection, any shunt, CGain scaling for big packs, calibration, quick start, alerts.",
+  "keywords": "max17055, max17260, fuel gauge, battery, modelgauge, state of charge, i2c, esp32",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR-USER/ModelGaugeM5.git"
+  },
+  "authors": [
+    { "name": "YOUR NAME", "email": "you@example.com" }
+  ],
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": "*",
+  "headers": ["MAX17055.h", "MAX17260.h"],
+  "examples": [
+    { "name": "BasicEZ_MAX17055", "base": "examples/BasicEZ_MAX17055", "files": ["BasicEZ_MAX17055.ino"] },
+    { "name": "BasicEZ_MAX17260", "base": "examples/BasicEZ_MAX17260", "files": ["BasicEZ_MAX17260.ino"] },
+    { "name": "BigPack_CGainScaling", "base": "examples/BigPack_CGainScaling", "files": ["BigPack_CGainScaling.ino"] }
+  ]
+}

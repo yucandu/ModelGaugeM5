@@ -1,0 +1,13 @@
+name: host tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unit tests (C++11)
+        run: make -C test
+      - name: Unit tests (C++17)
+        run: make -C test clean && make -C test test17
+      - name: Examples compile against the mock
+        run: sh test/check_examples.sh
