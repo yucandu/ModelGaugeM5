@@ -30,7 +30,7 @@ void loop() {
 | | |
 |---|---|
 | **Models** | EZ (no characterization), short custom ini, full custom ini with OCV table (Maxim host-side implementation guide, options 1-3) |
-| **Chemistries** | ModelID 0 (LiCoO2 / most Li-ion), 2 (NCR/NCA), 6 (LiFePO4); 4.2 V and 4.3-4.4 V charge voltage (`VChg`) |
+| **Chemistries** | ModelID 0 (LiCoO2 / most pouch-style Li-po, older 18650s, check for LCO writing), 2 (NCR/NCA, most 18650-style lipo, check for LCR or LCA writing), 6 (LiFePO4); 4.2 V and 4.3-4.4 V charge voltage (`VChg`) |
 | **Any shunt** | Every mA / mAh / W value is derived from the shunt you configure (1 mΩ … 1 Ω), including PCB-trace sensing |
 | **CGain scaling** | Big pack on a small shunt? The library runs the gauge at `CGain = 0x400/N` (N = 1, 2, 4, 8), chosen automatically or forced, and multiplies back. Also extends the current range |
 | **Calibration** | Single-point gain, offset, two-point gain+offset, shunt tolerance trim, all through CGain/COff |
